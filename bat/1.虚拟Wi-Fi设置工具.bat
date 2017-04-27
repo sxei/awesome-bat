@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-title 虚拟Wi-Fi设置工具v1.0(by lxa)
+title 虚拟Wi-Fi设置工具v1.1
 color 0A
 mode con: cols=50 lines=25
 
@@ -56,7 +56,8 @@ goto :EOF
 ver | find "6.1" >nul 2>nul && (echo 您的当前系统是Win7，符合要求！&echo.&goto :EOF)
 ver | find "6.2" >nul 2>nul && (echo 您的当前系统是Win8，符合要求！&echo.&goto :EOF)
 ver | find "6.3" >nul 2>nul && (echo 您的当前系统是Win8.1，符合要求！&echo.&goto :EOF)
-echo.&echo 抱歉，本批处理只能在Win7或Win8系统中使用！
+ver | find "10.0" >nul 2>nul && (echo 您的当前系统是Win10，符合要求！&echo.&goto :EOF)
+echo.&echo 抱歉，本批处理只能在Win7或更高版本系统中使用！
 echo.&echo 请按任意键退出吧……
 pause>nul
 exit
@@ -65,11 +66,11 @@ exit
 :about::关于
 echo.
 echo 【虚拟WiFi设置工具】
-echo 作者：刘显安
+echo 作者：柳夏南
 echo 微博：http://weibo.com/liuxianan
-echo QQ：937925941
+echo 官网：http://liuxianan.com
 echo 创建日期：2013年2月11日
-echo 最后修改：2015年4月30日
+echo 最后修改：2017年4月27日
 echo.
 goto :EOF
 

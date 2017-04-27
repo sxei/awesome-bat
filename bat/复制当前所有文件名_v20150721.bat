@@ -1,1 +1,0 @@
-tree . /f > Êä³ö.txt

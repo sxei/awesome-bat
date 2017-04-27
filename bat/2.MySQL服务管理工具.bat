@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion::延迟环境变量扩展
-title MySQL服务管理工具(by刘显安)
+title MySQL服务管理工具(by小茗同学)
 color 0A
 mode con: cols=50 lines=30
 
@@ -14,7 +14,7 @@ cls::清屏
 set Line===================================================
 echo %Line%
 echo 	提示：本工具同时支持XP、Win7、Win8系统
-echo			v20130505
+echo			v20170427
 echo.
 echo		[A]	安装MySQL服务
 echo		[B]	卸载MySQL服务
@@ -98,7 +98,8 @@ ver | find "5.1" >nul 2>nul && (echo 您的当前系统是WinXP，符合要求！&set value=s
 ver | find "6.1" >nul 2>nul && (echo 您的当前系统是Win7，符合要求！&set value=imageres.dll,196&echo.&goto :EOF)
 ver | find "6.2" >nul 2>nul && (echo 您的当前系统是Win8，符合要求！&set value=imageres.dll,197&echo.&goto :EOF)
 ver | find "6.3" >nul 2>nul && (echo 您的当前系统是Win8.1，符合要求！&set value=imageres.dll,197&echo.&goto :EOF)
-echo.&echo 抱歉，本批处理只能在XP、Win7或Win8系统中使用！
+ver | find "10.0" >nul 2>nul && (echo 您的当前系统是Win10，符合要求！&set value=imageres.dll,197&echo.&goto :EOF)
+echo.&echo 抱歉，本批处理只能在XP、Win7或更高版本系统中使用！
 echo.&echo 请按任意键退出吧……
 pause>nul
 exit
@@ -117,9 +118,10 @@ goto :EOF
 :about::关于
 echo.
 echo 【MySQL服务管理工具】
-echo 作者：刘显安
-echo 微博：http://weibo.com/liuxianan
-echo QQ：937925941
+echo 作者：柳夏南
+echo 官网：http://liuxianan.com
+echo 创建日期：2013年3月23日
+echo 最后修改：2017年4月27日
 echo.
 echo 更新历史：
 echo 20130323：v1.0 最初版本，具备安装、卸载、启动、停止MySQL服务等功能，但是必须先手动配置MySQL路径
