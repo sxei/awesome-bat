@@ -6,7 +6,7 @@ color 0A
 
 cls::清屏
 call :admintest::检查是否是管理员身份运行
-call :vercheck::检查当前系统是否是Win7或Win8
+::call :vercheck::检查当前系统是否是Win7或Win8
 
 
 :menu
